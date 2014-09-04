@@ -19,7 +19,7 @@ class FlattenServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app['config']->package('anahkiasen/flatten', __DIR__.'/../config');
+		$this->app['config']->package('namek/flatten', __DIR__.'/../config');
 
 		// Bind the classes
 		$this->app = static::make($this->app);

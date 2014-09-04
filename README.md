@@ -8,7 +8,7 @@ This will provide an essential boost to your application's speed, as your page's
 
 ### Installation
 
-Flatten installs just like any other package, via Composer : `composer require anahkiasen/flatten`.
+Flatten installs just like any other package, via Composer : `composer require namek/flatten`.
 
 Then if you're using Laravel, add Flatten's Service Provider to you `config/app.php` file :
 
@@ -24,7 +24,7 @@ And its facade :
 
 ### Configuration
 
-All the options are explained in the **config.php** configuration file. You can publish it via `artisan config:publish anahkiasen/flatten`.
+All the options are explained in the **config.php** configuration file. You can publish it via `artisan config:publish namek/flatten`.
 
 Here is a preview of the configuration options available in said file :
 
@@ -135,7 +135,7 @@ Basically you want to call that before _everything else_ (ie. before even loadin
 You use it like that :
 
 ```php
-require __DIR__.'/../vendor/anahkiasen/flatten/src/Flatten/Flatten.php';
+require __DIR__.'/../vendor/namek/flatten/src/Flatten/Flatten.php';
 
 Flatten\Flatten::kickstart();
 ```
@@ -143,7 +143,7 @@ Flatten\Flatten::kickstart();
 If you have things in your saltshaker, you'll need to find faster raw methods to get these and pass the salts as arguments :
 
 ```php
-require __DIR__.'/../vendor/anahkiasen/flatten/src/Flatten/Flatten.php';
+require __DIR__.'/../vendor/namek/flatten/src/Flatten/Flatten.php';
 
 $salt = mysql_query('SOMETHING');
 Flatten\Flatten::kickstart($salt);
