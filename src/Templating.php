@@ -53,7 +53,9 @@ class Templating
         $blade->directive('cache', function($expression) {
             $expression = rtrim($expression, ')');
 
-           return '<?php echo Flatten\\Facades\\Flatten::section' .$expression. ', function() { ?>';
+           return '<?php \$viewArgs = get_defined_vars();'
+		.'echo Flatten\\Facades\\Flatten::section' .$expression.
+		', function() use(\$viewArgs) { extract(\$viewArgs) ?>';
         });
 
         $blade->directive('endcache', function() {
